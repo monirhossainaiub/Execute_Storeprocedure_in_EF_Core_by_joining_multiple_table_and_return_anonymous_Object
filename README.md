@@ -8,7 +8,6 @@ public IEnumerable<dynamic> GetEmployeeFromSP(string spName, IDictionary<string,
                 command.CommandType = System.Data.CommandType.StoredProcedure;
                 // Create the dynamic result for each row
                 
-                {
                     foreach (var parameter in parameters)
                     {
                         var key = parameter.Key;
@@ -16,7 +15,7 @@ public IEnumerable<dynamic> GetEmployeeFromSP(string spName, IDictionary<string,
                         command.Parameters.Add(new SqlParameter($"@{key}", value));
                         
                     }
-                }
+                
 
                 using (command)
                 {
