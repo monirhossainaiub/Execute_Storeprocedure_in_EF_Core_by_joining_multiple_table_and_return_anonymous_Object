@@ -1,4 +1,6 @@
-    public IEnumerable<dynamic> GetEmployeeFromSP(string spName, IDictionary<string, object> parameters)
+//Execute store procedure from joining multiple table   
+
+public IEnumerable<dynamic> GetEmployeeFromSP(string spName, IDictionary<string, object> parameters)
         {
             using (var command = context.Database.GetDbConnection().CreateCommand())
             {
